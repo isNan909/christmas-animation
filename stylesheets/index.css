@@ -1,5 +1,10 @@
+html {
+  height: 100%;
+}
 body {
   background-color: rgb(91, 195, 255);
+  height: 100%;
+  position: relative;
 }
 svg.flakes {
   width: 10px;
@@ -78,4 +83,245 @@ svg.flakes {
 .snowing:nth-of-type(9) {
   left: 90%;
   animation-delay: 4s, 2s;
+}
+/* styling the christmas tree*/
+.tree {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, 0);
+}
+.tree-layerone {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 3px;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid #2e9e57;
+}
+.tree-layerone::after {
+  content: '';
+  border-bottom: 1px solid #fafafa;
+}
+.tree-layertwo {
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 120px solid #2e9e57;
+}
+.tree-layerthree {
+  position: absolute;
+  top: 50px;
+  left: -25px;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-bottom: 170px solid #2e9e57;
+}
+.tree-layerfour {
+  position: absolute;
+  top: 80px;
+  left: -36px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid #2e9e57;
+}
+.presents {
+  z-index: 1;
+  position: absolute;
+  top: 265px;
+  left: -43px;
+  width: 60px;
+  height: 45px;
+  background: #f45b69;
+}
+.cover {
+  position: absolute;
+  left: -3px;
+  width: 66px;
+  height: 10px;
+  background: #f45b69;
+  border-bottom: 1px solid #aaa;
+}
+.tree-wrapper,
+.tree-layers {
+  position: relative;
+  height: 100%;
+}
+.wrapper {
+  position: absolute;
+  left: 28px;
+  background: #e4b425;
+  width: 8px;
+  height: 45px;
+}
+.ribbon {
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  background: transparent;
+  width: 12px;
+  height: 25px;
+  border-radius: 0 80% 20% 80%;
+  border: 3px solid #c359a2;
+  transform: rotate(-10deg);
+}
+.ribbon:after {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  background: transparent;
+  width: 12px;
+  height: 25px;
+  border-radius: 0 80% 20% 80%;
+  border: 3px solid #c359a2;
+  transform: rotate(60deg);
+  content: '';
+}
+.tree-layerfour:after {
+  content: '';
+  width: 20px;
+  height: 30px;
+  background: #84714f;
+  position: absolute;
+  top: 200px;
+  left: -8px;
+}
+.bubble {
+  z-index: 1;
+  position: absolute;
+  border-radius: 100%;
+  animation: blinker 1s infinite linear;
+  opacity: 1;
+}
+.bubble.one {
+  top: 65px;
+  left: -9px;
+  width: 13px;
+  height: 13px;
+  background: #b7de26;
+}
+.bubble.one {
+  top: 65px;
+  width: 13px;
+  height: 13px;
+  background: #b7de26;
+}
+
+.bubble.two {
+  left: -30px;
+  top: 85px;
+  width: 13px;
+  height: 13px;
+  background: #b7de26;
+}
+
+.bubble.three {
+  top: 105px;
+  width: 13px;
+  right: -30px;
+  height: 13px;
+  background: #b8de25;
+}
+.bubble.four {
+  top: 145px;
+  left: 30px;
+  width: 13px;
+  height: 13px;
+  background: #b9de25;
+}
+.bubble.five {
+  top: 153px;
+  left: -36px;
+  width: 13px;
+  height: 13px;
+  background: #b9de25;
+}
+.star {
+  z-index: 1;
+  position: absolute;
+  left: -36px;
+  top: -40px;
+  display: block;
+  color: red;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid #ffe066;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg) scale(0.2);
+}
+.star::before {
+  border-bottom: 80px solid #ffe066;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+.star::after {
+  position: absolute;
+  display: block;
+  color: red;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid #ffe066;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
+.line {
+  z-index: 1;
+  position: absolute;
+}
+.line-one {
+  top: 60px;
+  left: -47px;
+  width: 70px;
+  height: 0;
+  border: 1px solid #03c300;
+  transform: rotate(-60deg);
+}
+.line-two {
+  top: 100px;
+  left: -18px;
+  width: 70px;
+  height: 0;
+  border: 1px solid #03c300;
+  transform: rotate(-120deg);
+}
+.line-three {
+  top: 140px;
+  left: -68px;
+  width: 70px;
+  height: 0;
+  border: 1px solid #03c300;
+  transform: rotate(-60deg);
+}
+.line-four {
+  top: 146px;
+  left: -13px;
+  width: 70px;
+  height: 0;
+  border: 1px solid #03c300;
+  transform: rotate(60deg);
+}
+/* bulb effect */
+@keyframes blinker {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
