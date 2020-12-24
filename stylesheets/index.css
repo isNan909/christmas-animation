@@ -1,7 +1,7 @@
 html {
   height: 100%;
 }
-body {
+body { 
   background-color: rgb(91, 195, 255);
   height: 100%;
   position: relative;
@@ -11,7 +11,16 @@ svg.flakes {
   height: 10px;
   fill: #fff;
 }
-
+.snowing {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  animation-name: snowing-falling, snowing-waves;
+  animation-duration: 10s, 3s;
+  animation-timing-function: ease-in, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
 @keyframes snowing-falling {
   0% {
     top: -5%;
@@ -33,16 +42,6 @@ svg.flakes {
   100% {
     transform: translateX(0px);
   }
-}
-.snowing {
-  position: fixed;
-  top: -10%;
-  z-index: 9999;
-  animation-name: snowing-falling, snowing-waves;
-  animation-duration: 10s, 3s;
-  animation-timing-function: ease-in, ease-in-out;
-  animation-iteration-count: infinite, infinite;
-  animation-play-state: running, running;
 }
 .snowing:nth-of-type(0) {
   left: 5%;
@@ -84,6 +83,7 @@ svg.flakes {
   left: 90%;
   animation-delay: 4s, 2s;
 }
+
 /* styling the christmas tree*/
 .tree {
   position: absolute;
@@ -199,12 +199,6 @@ svg.flakes {
 .bubble.one {
   top: 65px;
   left: -9px;
-  width: 13px;
-  height: 13px;
-  background: #b7de26;
-}
-.bubble.one {
-  top: 65px;
   width: 13px;
   height: 13px;
   background: #b7de26;
